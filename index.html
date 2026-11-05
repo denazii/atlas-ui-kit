@@ -1,0 +1,227 @@
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ATLAS UI Kit — дизайн-система Help Desk</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body class="app-shell">
+
+  <header class="topbar">
+    <a class="brand" href="#main">
+      <span class="brand__mark">A/</span>
+      <span>
+        <strong>ATLAS</strong>
+        <small>Interface system / v0.1</small>
+      </span>
+    </a>
+<div class="toolbar">
+  <div class="toolbar__field">
+    <label for="theme-select">Тема</label>
+    <select id="theme-select">
+      <option value="auto">Системная</option>
+      <option value="light">Светлая</option>
+      <option value="dark">Тёмная</option>
+    </select>
+  </div>
+  <div class="toolbar__field">
+    <label for="density-select">Плотность</label>
+    <select id="density-select">
+      <option value="ordinary">Обычная</option>
+      <option value="compact">Компактная</option>
+    </select>
+  </div>
+</div>
+  </header>
+
+  <main class="main" id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Библиотека интерфейса · Учебный проект</p>
+        <h1>Дизайн-система <span>Help Desk</span></h1>
+        <p class="hero__lead">
+          Один набор токенов управляет цветами, типографикой, отступами,
+          размерами компонентов и двумя темами. Измените тему или плотность
+          и проследите за поведением интерфейса.
+        </p>
+      </div>
+      <aside class="hero__aside">
+        <p class="eyebrow" style="margin:0 0 var(--space-2)">Сборка 01 / CSS + JS</p>
+        <strong>Centralized by design.</strong>
+        <span>Изменение роли — в одном месте, результат — во всех компонентах.</span>
+      </aside>
+    </section>
+
+    <!-- 01. ЦВЕТОВЫЕ РОЛИ -->
+    <section class="section">
+      <div class="section__heading">
+        <div>
+          <p class="section__number">01 — ОСНОВЫ</p>
+          <h2>Цветовые роли</h2>
+        </div>
+        <p>Семантические имена вместо случайных HEX-значений</p>
+      </div>
+      <div class="swatches">
+        <div class="swatch">
+          <span class="swatch__color swatch__color--primary"></span>
+          <strong>Primary</strong>
+          <code>--color-primary</code>
+        </div>
+        <div class="swatch">
+          <span class="swatch__color swatch__color--surface"></span>
+          <strong>Surface</strong>
+          <code>--color-surface</code>
+        </div>
+        <div class="swatch">
+          <span class="swatch__color swatch__color--subtle"></span>
+          <strong>Subtle</strong>
+          <code>--color-surface-subtle</code>
+        </div>
+        <div class="swatch">
+          <span class="swatch__color swatch__color--text"></span>
+          <strong>Text</strong>
+          <code>--color-text</code>
+        </div>
+        <div class="swatch">
+          <span class="swatch__color swatch__color--border"></span>
+          <strong>Control border</strong>
+          <code>--color-border-control</code>
+        </div>
+        <div class="swatch">
+          <span class="swatch__color swatch__color--success"></span>
+          <strong>Success</strong>
+          <code>--color-success</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 + 03. ТИПОГРАФИКА И ОТСТУПЫ -->
+    <div class="section-grid">
+      <section class="section section--card">
+        <p class="section__number">02 — ОСНОВЫ</p>
+        <h2>Типографика</h2>
+        <div class="type-samples">
+          <div class="type-row">
+            <code>display</code>
+            <p class="type-display">Система, а не набор стилей</p>
+          </div>
+          <div class="type-row">
+            <code>heading</code>
+            <p class="type-heading">Заголовок секции</p>
+          </div>
+          <div class="type-row">
+            <code>body</code>
+            <p class="type-body">Рабочий текст, который читают каждый день.</p>
+          </div>
+          <div class="type-row">
+            <code>small</code>
+            <p class="type-small">Вспомогательная информация для интерфейса.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--card">
+        <p class="section__number">03 — ОСНОВЫ</p>
+        <h2>Шкала отступов</h2>
+        <div class="space-samples">
+          <div class="space-row"><code>4px</code><span style="--bar-width:4px"></span></div>
+          <div class="space-row"><code>8px</code><span style="--bar-width:8px"></span></div>
+          <div class="space-row"><code>12px</code><span style="--bar-width:12px"></span></div>
+          <div class="space-row"><code>16px</code><span style="--bar-width:16px"></span></div>
+          <div class="space-row"><code>24px</code><span style="--bar-width:24px"></span></div>
+          <div class="space-row"><code>32px</code><span style="--bar-width:32px"></span></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 04. КНОПКИ -->
+    <section class="section">
+      <div class="section__heading">
+        <div>
+          <p class="section__number">04 — КОМПОНЕНТЫ</p>
+          <h2>Кнопки и состояния</h2>
+        </div>
+        <p>Hover, active, focus-visible, disabled</p>
+      </div>
+      <div class="demo-panel">
+        <div class="button-list">
+          <button type="button" class="button button--primary" id="demo-action">Создать заявку</button>
+          <button type="button" class="button button--secondary">Вторичное действие</button>
+          <button type="button" class="button button--ghost">Без заливки</button>
+          <button type="button" class="button button--primary" disabled>Недоступно</button>
+        </div>
+        <p class="hint" id="demo-feedback">Нажмите первую кнопку для демонстрации обратной связи.</p>
+      </div>
+    </section>
+
+    <!-- 05 + 06. ПОЛЯ И УВЕДОМЛЕНИЯ -->
+    <div class="section-grid">
+      <section class="section section--card">
+        <p class="section__number">05 — КОМПОНЕНТЫ</p>
+        <h2>Поля ввода</h2>
+        <form class="form-stack" onsubmit="return false;">
+          <div class="field">
+            <label for="username">Имя пользователя <span aria-hidden="true">*</span></label>
+            <input type="text" id="username" class="input" placeholder="Например, Алексей">
+          </div>
+          <div class="field">
+            <label for="email">Электронная почта</label>
+            <input type="email" id="email" class="input" aria-invalid="true" aria-describedby="email-error" value="wrong-address">
+            <p class="field__error" id="email-error">Проверьте формат адреса электронной почты.</p>
+          </div>
+          <div class="field">
+            <label for="closed">Закрытое поле</label>
+            <input type="text" id="closed" class="input" disabled placeholder="Недоступно для изменения">
+          </div>
+        </form>
+      </section>
+
+      <section class="section section--card">
+        <p class="section__number">06 — КОМПОНЕНТЫ</p>
+        <h2>Уведомления</h2>
+        <div class="alert-stack">
+          <div class="alert alert--info">
+            <span class="alert__symbol" aria-hidden="true"></span>
+            <div class="alert__content">
+              <p class="alert__title">Информация</p>
+              <p class="alert__text">Заявка будет обработана в течение рабочего дня.</p>
+            </div>
+          </div>
+          <div class="alert alert--success">
+            <span class="alert__symbol" aria-hidden="true"></span>
+            <div class="alert__content">
+              <p class="alert__title">Сохранено</p>
+              <p class="alert__text">Изменения успешно применены к проекту.</p>
+            </div>
+          </div>
+          <div class="alert alert--error">
+            <span class="alert__symbol" aria-hidden="true"></span>
+            <div class="alert__content">
+              <p class="alert__title">Ошибка</p>
+              <p class="alert__text">Не удалось отправить форму. Проверьте данные.</p>
+            </div>
+          </div>
+          <div class="alert alert--warning">
+            <span class="alert__symbol" aria-hidden="true"></span>
+            <div class="alert__content">
+              <p class="alert__title">Предупреждение</p>
+              <p class="alert__text">Срок ответа скоро истечёт. Не откладывайте обработку заявки.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <span>ATLAS UI Kit · Практика по дизайн-токенам</span>
+      <span>HTML / CSS Custom Properties / Vanilla JS</span>
+    </footer>
+
+  </main>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>
